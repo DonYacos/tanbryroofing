@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+		<title>You Have a New Lead</title>
+	</head>
+	<body>
+		<h1>New Lead</h1>
+
+		<p><strong>First Name: </strong><br><%= @lead.firstName.capitalize %></p>
+
+		<p><strong>Last Name: </strong><br><%= @lead.lastName.capitalize %></p>
+
+		<p><strong>Phone: </strong><br><%= @lead.phone %></p>
+
+		<p><strong>Email: </strong><br><%= @lead.email %></p>
+
+		<p><strong>Residential: </strong><br><%= @lead.residential %> </p>
+
+		<p><strong>Commercial: </strong><br><%= @lead.commercial %> </p>
+
+		<p><strong>Address: </strong><br>
+			<%= @lead.street %><br>
+			<%= @lead.city %>, <%= @lead.state %>  <%= @lead.zip %><br>
+		</p>		
+
+		<p><strong>Comment:</strong><br><%= @lead.comment %></p>		
+
+	</body>
+</html>

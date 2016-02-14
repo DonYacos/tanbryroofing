@@ -1,0 +1,143 @@
+
+<!-- Modal -->
+<div class="modal fade" id="expertInstallers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Trained and Certified Installers</h4>
+      </div>
+      <div class="modal-body">
+        <p>Bryce Roofing installers are trained and certified by the manufacturer. That means expert roof installations on your home or business.  We have been honored with GAF&reg;'s Training Excellence Award for outstanding ongoing training for our installers. </p>
+
+        <p>We've also achieved an A+ Rating on the Better Business Bureau&reg;, as well as customers just like you voting us to an A Rating on Angie's List&reg;.</p>
+
+        <p>Why should you care?</p>
+        
+        <p>Your roof gets installed right the first time at a fair price and no hassles. That coupled with the industry's best warranty options makes choosing Bryce Roofing safe and reliable.</p>       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= link_to "LET US QUOTE YOUR PROJECT", "/leads/new", :class => "btn btn-primary img-responsive" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="stormDamage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Storm Damage?</h4>
+      </div>
+      <div class="modal-body">
+        <p>When there is a storm, and that storm causes sudden and accidental damage to your home and property, you have a scenario in which to make a claim on your home owner's insurance.</p>
+
+        <p>Common storm related damage comes from:</p>
+
+        <ol>
+          <li>Wind</li>
+          <li>Hail</li>
+          <li>Falling Debris</li>
+          <li>and, Snow</li>
+        </ol>
+
+        <p>Our team at Bryce Roofing Roofing can help guide you through the insurance claim process. Your insurance agent will tell you; the first step is to find a contractor that is best qualified to handle the repairs caused by the storm event, and that you're comfortable working with. This may include emergency repairs to mitigate any further damage to the property.</p>
+
+        <p>Next, we will provide a detailed assessment of the damage and an estimate to complete the repairs necessary to make you whole again.</p>
+
+        <p>After our inspection, we will meet with your adjuster to assist in their assessment of the damage(s) while making sure no detail is missed and providing our estimate for repair.  We have licensed adjusters on staff and understand this process very well.</p>
+
+        <p>Lastly, after approval of your claim from your insurance company, we schedule your work to be completed in a timely manner so that you can get back to your life!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= link_to "SCHEDULE YOUR FREE ASSESSMENT", "/leads/new", :class => "btn btn-primary img-responsive" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron img-responsive">
+
+	<div class="container">
+	  <h1 id="hero-headline" >$500 Off! <small id="inside-jumbotron">Roof Replacement</small></h1>
+	  <p id="inside-jumbotron">
+	    Commercial or residential, we're focused on you,<br>the client, providing the best roofing solutions for your project.
+	  </p>
+	  <p><a href="pages/about" class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+	</div>
+</div>
+
+
+
+<!-- Body of home page -->
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= link_to image_tag "donweldingsmall.jpg" %>
+          <div class="caption">
+            <h3>Expert Installers</h3>
+            <p>You win because you get the job installed right with no hassles.  Our installers have many years of experience and are trained and certified by leading manufacturers of residential and commercial roofing products.</p>
+            <!-- Button trigger modal -->
+            <button class="btn btn-primary" data-toggle="modal" data-target="#expertInstallers">
+              Learn more »
+            </button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= link_to image_tag "lightning.jpg" %>
+          <div class="caption">
+            <h3>Storm Damage?</h3>
+            <p>If you have storm damage we can help with your insurance claim. We have a great deal of experience with insurance claims and can help you through the insurance claim process.</p><br>
+            <!-- Button trigger modal -->
+            <button class="btn btn-primary" data-toggle="modal" data-target="#stormDamage">
+              Learn more »
+            </button>
+          </div>
+        </div>
+     </div>
+      <div class="col-md-4 estimate">
+        <h2>Let us give you a quote! <small id="small-quote">quick quote form</small></h2>
+          <%= form_for Lead.new do |f| %>
+
+            <div class="form-group">
+              <%= f.label "First name" %>
+              <%= f.text_field :firstName, :class => "form-control", :placeholder => "Enter first name" %>
+            </div>
+            <div class="form-group">
+              <%= f.label "Last name" %>
+              <%= f.text_field :lastName, :class => "form-control", :placeholder => "Enter last name" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :phone %>
+              <%= f.telephone_field :phone, :class => "form-control", :placeholder => "Enter phone number" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, :class => "form-control", :placeholder => "Enter email" %>
+            </div>              
+            <div class="form-group">
+              
+              <p class="help-block">Please tell us whether your roof is for a residence or<br>a commercial property.</p>
+            </div>
+            <div class="checkbox">
+              <%= check_box_tag(:residential) %>
+              <%= label_tag(:residential) %>
+            </div>
+            <div class="checkbox">
+              <%= check_box_tag(:commercial) %>
+              <%= label_tag(:commercial) %>
+            </div>
+            <%= f.submit "Submit", :class => "btn btn-default btn-lg" %> 
+          <% end %>
+      </div>
+
+    </div>

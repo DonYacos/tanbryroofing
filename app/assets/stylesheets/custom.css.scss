@@ -1,0 +1,163 @@
+@import 'bootstrap';
+
+/* this is a custom css file */
+
+body {
+	margin-top: 133px;
+}
+
+p {
+	font-size: 1.1em;
+}
+
+.navbar-nav {
+	float: right;
+}
+
+.jumbotron {
+	background-image: url("shingles.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#hero-headline {
+	font-weight: bolder;
+	color: white;
+}
+
+#inside-jumbotron {
+	color: white;
+}
+
+.logo {
+	padding: 20px 0px 10px 0px;
+}
+
+.app_header {
+	background-color: #FFFFFF;
+    box-shadow: 0 2px 5px 0 #111;
+    left: 0;
+    min-width: 300px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    z-index: 400;
+}
+
+.call-action {
+	width: 300px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+h1.quote-mark {
+	font-size: 5em;
+	color: #8d9aa5;
+}
+
+.quote-mark {
+	font-size: 5em;
+}
+
+div#quote {
+	padding: 30px 25px 25px 2px;
+	color: #8d9aa5;
+}
+
+div#quote-with-mark {
+	background: #edeff0;
+	border-radius: 5px;
+	box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.2);
+}
+
+
+
+
+@media (max-width: 600px) {
+	.app_header {
+		position: initial;
+	}
+
+	body {
+		margin-top: 50px;
+	}
+
+	.call-action {
+		clear: both;
+		margin: auto;
+	}
+}
+
+
+#phone a {
+	list-style-type: none;
+	text-decoration: none;
+	padding-top: 0px;
+	margin-top: 0px;
+	color: #777;
+}
+
+#phone a:hover {
+	color: #555;
+	cursor: default;
+}
+
+.estimate {
+	background-color: #5cb85c;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	color: white;
+	box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.2);
+	border: 2px solid #5cb85c;
+	border-radius: 5px;
+}
+
+.footer-menu-under-logo {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	color: #777;
+	text-decoration: none;
+}
+
+#footer-menu-under-logo {
+	color: #777;
+	text-decoration: none;
+}
+
+a#footer-menu-under-logo:hover {
+	color: #555;
+}
+
+#small-quote {
+	color: white;
+}
+
+.help-block {
+	color: black;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+#footer {
+   
+}
+
+#thanks {
+	margin-bottom: 20px;
+	font-size: 1.1em;
+}
+
+.roof-page-img {
+	margin: 15px 0px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #333;
+	padding: 10px;
+	box-shadow: 1px 1px 2px gray;
+}
+
+

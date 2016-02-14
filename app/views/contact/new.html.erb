@@ -1,0 +1,110 @@
+<% provide(:title, "Contact") %>
+<% content_for :description do %>Bryce Roofng and Contacting. We are a full service residential and commercial roofing company<% end %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>Contact</h1>
+			</div>
+
+		</div>
+
+	</div>
+	
+
+		
+
+
+
+	<div class="row">
+
+		<div class="col-md-8">
+			<h3 id="phone"><a onclick="goog_report_conversion('tel:888-203-8620')" href="tel://1-888-203-8620"><span class="glyphicon glyphicon-earphone"></span> Call Us at 888-203-8620</a></h3>
+		</div>
+	</div>
+
+		<div class="row">	
+
+			<div class="col-md-8">
+				<h2 id="locations">Locations</h2>
+			</div>
+		
+			<div class="col-md-8">
+				<div class="col-md-12" id="phone">
+					<div class="col-md-6">					
+
+						<address>
+							<strong>Bryce Roofing and Contracting|Memphis, TN</strong><br>
+							152 Signature Glen Cir<br>
+							Collierville, TN  38017<br>
+							<a onclick="goog_report_conversion('tel:888-203-8620')" href="tel://1-901-209-4047"><abbr title="Phone:">P:</abbr> (901) 209-4047</a>
+						</address>
+			
+					</div>
+
+					<!-- <div class="col-md-6">					
+
+						<address>
+							<strong>Tanbry Roofing and Contracting|Macomb, MI</strong><br>
+							48690 Southway<br>
+							Macomb, MI 48044<br>
+							<a href="tel://1-586-623-6920"><abbr title="Phone:">P:</abbr> (586) 623-6920</a>
+						</address>
+			
+					</div> -->
+
+					<div class="col-md-6">					
+
+						<address>
+							<strong>Bryce Roofing and Contracting|Austin, TX</strong><br>
+							1585 Coles Springs Rd<br>
+							Buda, TX 78610<br>
+							<a href="tel://1-512-649-7044"><abbr title="Phone:">P:</abbr> (512) 649-7044</a>
+						</address>
+			
+					</div>
+
+
+
+				</div>
+			</div>
+
+<!-- Contact email form -->
+		<div class="col-md-4 estimate" >
+			<%= form_for @message, :url => contact_path do |form| %>
+				<h2>Shoot us an email, we'd love to here from you!</h2>
+				<fieldset class="fields">
+					<div class="form-group">
+						<%= form.label :name %>
+						<%= form.text_field :name, :class => "form-control", :placeholder => "Enter your name here" %>
+					</div>
+
+					<div class="form-group">
+						<%= form.label :email %>
+						<%= form.email_field :email, :class => "form-control", :placeholder => "Enter email" %>
+					</div>
+
+					<div class="form-group">
+						<%= form.label :subject %>
+						<%= form.text_field :subject, :class => "form-control", :placeholder => "Enter subject" %>
+					</div>
+
+					<div class="form-group">
+						<%= form.label :message %>
+						<%= form.text_area :body, :class => "form-control", :rows => "5", :placeholder => "Enter message" %>
+					</div>
+				</fieldset>
+
+				<fieldset class="actions">
+					<%= form.submit "Send", :class => "btn btn-default btn-lg" %>
+				</fieldset>
+			<% end %>
+
+		</div>
+	</div>
+
+	
+		
+	
+</div>	

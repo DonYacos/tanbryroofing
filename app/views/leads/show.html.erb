@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="page-header">
+		<h1>You're in!</h1>
+	</div>
+
+	<div id="thanks">
+		<p>Thanks <%= @leads.firstName.strip.capitalize %>!</p>
+		<p>We'll be contacting you shortly to talk about your project.</p> 
+		<p>We look forward to meeting you. </p>
+	</div>
+
+	<%= link_to "OK", root_path, style: "width:60px", class: "btn btn-primary" %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
