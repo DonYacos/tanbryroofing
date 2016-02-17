@@ -67,7 +67,7 @@
       </div>
       
       <div class="col-md-offset-4 col-md-4">
-        <div class="call-action img-responsive">           
+        <div class="call-action img-responsive" id="get-estimate-button">           
           <%= link_to "GET A FREE ESTIMATE", "/leads/new", :class => "btn btn-primary btn-lg btn-block img-responsive"%>
         </div>
       </div>
@@ -190,7 +190,7 @@ phone number link or button. -->
   var conv_handler = window['google_trackConversion'];
   if (typeof(conv_handler) == 'function') {
     conv_handler(opt);
-  }
+  };
 }
 /* ]]> */
 </script>
