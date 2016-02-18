@@ -14,11 +14,8 @@ $(document).ready ->
   $(".estimate input").focus ->
     $(".estimate").addClass "leads-new"
     return
-
-  # $('#get-estimate-button').click ->
-  #   $('.app_header').hide()
-  #   return 
   
-
 return
+
+
 
