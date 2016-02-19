@@ -1,17 +1,36 @@
+
+
 <div class="container">
-	<div class="page-header">
-		<h1>You're in!</h1>
+	<div id="you-are-in" class="col-md-6 estimate leads-new">
+		
+	
+
+	<div id="thanks" class="thanks-for-interest">
+
+		<h2><strong>You're in!</strong></h2>
+		<p class="lead">Again, thanks <%= @leads.firstName.strip.capitalize %>, for allowing us the opportunity to give you a quote!<br>
+		We'll reach out to you shortly to talk about your project. <br> 
+		...look forward to meeting you. </p>
+
+		<%= link_to "Close", root_path, class: "btn btn-default" %>
 	</div>
 
-	<div id="thanks">
-		<p>Thanks <%= @leads.firstName.strip.capitalize %>!</p>
-		<p>We'll be contacting you shortly to talk about your project.</p> 
-		<p>We look forward to meeting you. </p>
+	
+
 	</div>
 
-	<%= link_to "OK", root_path, style: "width:60px", class: "btn btn-primary" %>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.app_header').hide();
+    $('.navbar-header').before('<div id="logo-white"><%= link_to image_tag("logo-white.png", :class => "img-responsive"), root_path %></div>');
+    $('.navbar-right').hide();
+    $('.navbar-header').addClass('navbar-right');
+  });
+</script>
 
 </div>
+
+
 
 
 
