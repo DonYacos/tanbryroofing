@@ -7,24 +7,55 @@
 	<body>
 		<h1>New Lead</h1>
 
-		<p><strong>First Name: </strong><br><%= @lead.firstName.capitalize %></p>
+		<p>
+			<strong>Name: </strong><br>
+			<%= @lead.firstName.capitalize %> <%= @lead.lastName.capitalize %>
+		</p>
 
-		<p><strong>Last Name: </strong><br><%= @lead.lastName.capitalize %></p>
+		<p>
+			<strong>Address: </strong><br>
+			<%= @lead.streetnumber %> <%= @lead.street %><br>
+			<%= @lead.city %>, <%= @lead.state %>  <%= @lead.zip %><br>
+		</p>
 
-		<p><strong>Phone: </strong><br><%= @lead.phone %></p>
+		<%
+		def address_for_google_maps
+			address = "#{@lead.streetnumber} #{@lead.street}, #{@lead.city}, #{@lead.state} #{@lead.zip}"
+			address.split.map { |e| "+" + e }.join
+	    end
+		%>
+
+		<p>
+			<strong>Phone: </strong><br>
+			<%= @lead.phone %>	
+		</p>
 
 		<p><strong>Email: </strong><br><%= @lead.email %></p>
 
-		<p><strong>Residential: </strong><br><%= @lead.residential %> </p>
+		<p>
+			<strong>Comment:</strong><br>
+			<% if @lead.comment.empty? %>
+			  No comment was entered!
+			<% else %>
+			  <%= @lead.comment %>
+			<% end %>
+		</p>
 
-		<p><strong>Commercial: </strong><br><%= @lead.commercial %> </p>
+		
+			
 
-		<p><strong>Address: </strong><br>
-			<%= @lead.streetnumber %> <%= @lead.street %><br>
-			<%= @lead.city %>, <%= @lead.state %>  <%= @lead.zip %><br>
-		</p>		
+			<a class="call-button" href="tel://<%= @lead.phone %>" role="button" style="display:inline-block; margin: 10px auto; width: 300px;height: 40px;background-color: #4ca1f4;color: #fff;text-align: center;text-decoration: none;font-family: Arial,Helvetica,sans-serif;font-weight: 300px;min-height: 16px;line-height: 16px;padding: 17px 50px;box-shadow: 0px 1px 5px #888;">Call</a>
 
-		<p><strong>Comment:</strong><br><%= @lead.comment %></p>		
+			
+
+			
+
+			<a class="schedule-button" href="https://www.google.com/maps/place/<%= address_for_google_maps %>" role="button" target="_blank" style="display:inline-block; margin: 10px auto; width: 300px;height: 40px;background-color: #4ca1f4;color: #fff;text-align: center;text-decoration: none;font-family: Arial,Helvetica,sans-serif;font-weight: 300px;min-height: 16px;line-height: 16px;padding: 17px 50px;box-shadow: 0px 1px 5px #888;">Map it!</a>
+
+			
+		
+
+				
 
 	</body>
 </html>

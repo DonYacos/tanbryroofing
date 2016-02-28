@@ -1,2 +1,7 @@
 <h1>Leads#index</h1>
 <p>Find me in app/views/leads/index.html.erb</p>
+
+<%= @leads.each do |lead| %>
+	<p><%= lead.firstName %> <%= lead.lastName %></p>
+	<p><%= lead.email %></p>
+<% end %>
