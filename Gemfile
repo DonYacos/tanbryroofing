@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'bcrypt'
+
+gem 'bcrypt-ruby'
+
 gem 'bootstrap-sass', '3.1.1'
 
 gem 'sprockets', '2.11.0'
