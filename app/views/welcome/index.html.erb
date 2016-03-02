@@ -124,18 +124,7 @@
               <%= f.label :email %>
               <%= f.email_field :email, :class => "form-control", :placeholder => "Enter email" %>
             </div>              
-            <div class="form-group">
-              
-              <p class="help-block">Please tell us whether your roof is for a residence or<br>a commercial property.</p>
-            </div>
-            <div class="checkbox">
-              <%= check_box_tag(:residential) %>
-              <%= label_tag(:residential) %>
-            </div>
-            <div class="checkbox">
-              <%= check_box_tag(:commercial) %>
-              <%= label_tag(:commercial) %>
-            </div>
+            
             <%= f.submit "Submit", :class => "btn btn-default btn-lg" %> 
           <% end %>
       </div>

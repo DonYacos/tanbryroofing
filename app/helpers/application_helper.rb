@@ -9,6 +9,12 @@ module ApplicationHelper
 		end
 	end
 
+	def body_id(id)
+		unless id.empty?
+			"id=#{id}"
+		end
+	end
+
 	def is_active(action)
 		params[:action] == action ? "active" : nil
 	end

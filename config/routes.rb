@@ -10,9 +10,12 @@ Tanbryroofing::Application.routes.draw do
   get "pages/commercial"
   get "pages/residential"
   get "pages/contact_us"
+  get "signup" => 'users#new'
 
   match 'contact' => 'contact#new',  :via => :get
   match 'contact' => 'contact#create',  :via => :post
+
+  resources :users
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
