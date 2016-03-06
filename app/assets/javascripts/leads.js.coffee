@@ -14,6 +14,9 @@ $(document).ready ->
   $(".estimate input").focus ->
     $(".estimate").addClass "leads-new"
     return
+
+  if $('body#leads-show')
+    $('.alert').hide()
   
 return
 

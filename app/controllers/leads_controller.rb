@@ -12,7 +12,7 @@ class LeadsController < ApplicationController
   	if @lead.save
   		LeadMailer.welcome_email(@lead).deliver
   		LeadMailer.email_lead(@lead).deliver
-  		redirect_to @lead, alert: "Well done! Info was received successfully :)"
+  		redirect_to @lead, alert: "Success :)"
   	else
   		redirect_to new_lead_path, alert: "Oops! Maybe we missed something :( Please try again!"
   	end
