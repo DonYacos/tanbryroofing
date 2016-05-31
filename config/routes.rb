@@ -13,8 +13,12 @@ Tanbryroofing::Application.routes.draw do
   get "pages/commercial"
   get "pages/residential"
   get "pages/contact_us"
-  get "signup" => 'users#new'
 
+  get    'signup' => 'users#new'
+  get    'login'  => 'sessions#new'
+  post   'login'  => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+ 
   match 'contact' => 'contact#new',  :via => :get
   match 'contact' => 'contact#create',  :via => :post
 
