@@ -105,28 +105,15 @@
         </div>
      </div>
       <div class="col-md-4 estimate">
-        <h2>Let us give you a quote! <small id="small-quote">quick quote form</small></h2>
-          <%= form_for Lead.new do |f| %>
+        <h1 id="hero-headline">Need a Roof Repair?<small id="small-quote">We do those too!</small></h1>
 
-            <div class="form-group">
-              <%= f.label "First name" %>
-              <%= f.text_field :firstName, :class => "form-control", :placeholder => "Enter first name" %>
-            </div>
-            <div class="form-group">
-              <%= f.label "Last name" %>
-              <%= f.text_field :lastName, :class => "form-control", :placeholder => "Enter last name" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :phone %>
-              <%= f.telephone_field :phone, :class => "form-control", :placeholder => "Enter phone number" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :email %>
-              <%= f.email_field :email, :class => "form-control", :placeholder => "Enter email" %>
-            </div>              
-            
-            <%= f.submit "Submit", :class => "btn btn-default btn-lg" %> 
-          <% end %>
+        <p>Sometimes all you need is a repair! Repairing roof problems early can prevent structural damage and save you the expense of replacing the whole roof. </p>
+
+        <p><h4>Common residential roofing repairs include:</h4> flashings at penetrations such as vents, skylights, pipes, curbs, walls and chimneys; blown off shingles; blocked or inadequate ventilation; and leaking valleys.</p>
+
+        <p><h4>Common commercial roofing repairs include:</h4> open seams in roof membrane; ponding water; flashings at penetrations such as vents, skylights, pipes, curbs, walls and chimneys; and rips, tears and punctures to the roof membrane.</p>
+
+          
       </div>
 
     </div>
