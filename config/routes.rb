@@ -1,5 +1,7 @@
 Tanbryroofing::Application.routes.draw do
 
+  resources :estimates
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

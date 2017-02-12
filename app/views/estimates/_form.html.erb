@@ -1,0 +1,49 @@
+<%= form_for(@estimate) do |f| %>
+  <% if @estimate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estimate.errors.count, "error") %> prohibited this estimate from being saved:</h2>
+
+      <ul>
+      <% @estimate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Lead" %><br>
+    <%= f.collection_select :lead_id, @leads, :id, :full_name, prompt: true   %>
+  </div>
+
+  <div class="field">
+    <%= f.label  "Billing address" %><br>
+    <%= f.text_area :address, :id => "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estimate_date %><br>
+    <%= f.date_select :estimate_date %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration_date %><br>
+    <%= f.date_select :expiration_date %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.text_field :total, :id => "email" %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  
+<% end %>

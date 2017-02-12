@@ -11,23 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160613200456) do
+ActiveRecord::Schema.define(version: 20160629011817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "leads", force: true do |t|
-    t.string "firstName"
-    t.string "lastName"
-    t.string "phone"
-    t.string "email"
-    t.string "streetnumber"
-    t.string "street"
-    t.string "city"
-    t.string "state"
-    t.string "zip"
-    t.text   "comment"
+  create_table "estimates", force: true do |t|
+    t.date     "estimate_date"
+    t.date     "expiration_date"
+    t.float    "total"
+    t.integer  "quantity"
+    t.float    "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "lead_id"
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "phone"
   end
+
+  create_table "leads", force: true do |t|
+    t.string  "firstName"
+    t.string  "lastName"
+    t.string  "phone"
+    t.string  "email"
+    t.string  "streetnumber"
+    t.string  "street"
+    t.string  "city"
+    t.string  "state"
+    t.string  "zip"
+    t.text    "comment"
+    t.integer "estimate_id"
+  end
+
+  add_index "leads", ["estimate_id"], name: "index_leads_on_estimate_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

@@ -1,4 +1,8 @@
 class LeadsController < ApplicationController
+
+  
+
+
   def index
     @leads = Lead.all
   end
@@ -23,6 +27,6 @@ class LeadsController < ApplicationController
   end
 
   def show
-  	@leads = Lead.find( params[:id] )
+  	@lead = Lead.find( params[:id] )
   end
 end
