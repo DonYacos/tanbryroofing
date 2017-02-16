@@ -137,7 +137,7 @@
     </div>
     
     
-    <p class="text-muted" style="text-align: center;">Copyright © Bryce Companies 2016 </p>
+    <p class="text-muted" style="text-align: center;">Copyright © Bryce Companies 2017. All rights reserved. </p>
   </div>
 </div>
 
@@ -192,9 +192,7 @@
 </script>
 
 
-
-
-<!-- Google Code for Calls from Bryce mobile site Conversion Page
+<!-- Google Code for Phone clicks on mobile site Conversion Page
 In your html page, add the snippet and call
 goog_report_conversion when someone clicks on the
 phone number link or button. -->
@@ -202,8 +200,8 @@ phone number link or button. -->
   /* <![CDATA[ */
   goog_snippet_vars = function() {
     var w = window;
-    w.google_conversion_id = 937112397;
-    w.google_conversion_label = "1cndCI3Bu2MQzebsvgM";
+    w.google_conversion_id = 860242707;
+    w.google_conversion_label = "6hqKCPeVrm4Qk4aZmgM";
     w.google_remarketing_only = false;
   }
   // DO NOT CHANGE THE CODE BELOW.
@@ -212,17 +210,55 @@ phone number link or button. -->
     window.google_conversion_format = "3";
     var opt = new Object();
     opt.onload_callback = function() {
-    if (typeof(url) != 'undefined') 
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
   }
   var conv_handler = window['google_trackConversion'];
   if (typeof(conv_handler) == 'function') {
     conv_handler(opt);
-  };
+  }
 }
 /* ]]> */
 </script>
 <script type="text/javascript"
   src="//www.googleadservices.com/pagead/conversion_async.js">
 </script>
+
+<!-- Google Code for Estimate Form Submission Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  goog_snippet_vars = function() {
+    var w = window;
+    w.google_conversion_id = 860242707;
+    w.google_conversion_label = "Ng80CKv2x24Qk4aZmgM";
+    w.google_remarketing_only = false;
+  }
+  // DO NOT CHANGE THE CODE BELOW.
+  goog_report_conversion = function(url) {
+    goog_snippet_vars();
+    window.google_conversion_format = "3";
+    var opt = new Object();
+    opt.onload_callback = function() {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  }
+  var conv_handler = window['google_trackConversion'];
+  if (typeof(conv_handler) == 'function') {
+    conv_handler(opt);
+  }
+}
+/* ]]> */
+</script>
+<script type="text/javascript"
+  src="//www.googleadservices.com/pagead/conversion_async.js">
+</script>
+
+
+
 </body>
 </html>
