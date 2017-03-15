@@ -60,15 +60,19 @@ p {
 }
 
 #get-estimate-button {
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,0.26);
 	border: 1px solid;
-	border-color: #1a237e;
-	text-shadow: 1px 1px 1px #aaa;
+	/*background-color: #00796b;
+	border-color: #00695c;*/
+	background-color: #fb8c00;
+	border-color: #ef6c00;
+	font-size: 1.6em;
+	text-shadow: 1px 1px 1px #333;
 }
 
 #get-estimate-button:hover {
 	box-shadow: 0 10px 25px 0 rgba(0,0,0,0.22);
-	transition-delay: 0.2s;
+	transition-delay: 0.1s;
 }
 
 h1.quote-mark {
