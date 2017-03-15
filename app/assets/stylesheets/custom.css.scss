@@ -59,6 +59,18 @@ p {
 	padding-bottom: 10px;
 }
 
+#get-estimate-button {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	border: 1px solid;
+	border-color: #1a237e;
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+#get-estimate-button:hover {
+	box-shadow: 0 10px 25px 0 rgba(0,0,0,0.22);
+	transition-delay: 0.2s;
+}
+
 h1.quote-mark {
 	font-size: 5em;
 	color: #8d9aa5;
