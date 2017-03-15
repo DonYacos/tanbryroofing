@@ -23,9 +23,11 @@ p {
 }
 
 .jumbotron {
-	background-image: url("shingles.jpg");
+	background: #00897b;
+	background-image: url("cedar_stone_chimney.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	background-position: right;
 }
 
 #hero-headline {
