@@ -76,15 +76,16 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-4">
-        <div class="logo img-responsive pull-left">
+      <div class="col-sm-4">
+        <div class="logo">
           <%= link_to image_tag("bryce-logo-larger.png", :class => "img-responsive", :Id => "logo"), root_path %>
         </div>
       </div>
       
       <div class="col-md-offset-4 col-md-4">
-        <div class="call-action img-responsive">           
-          <%= link_to "Get a FREE Estimate!", "/leads/new", :id => "get-estimate-button", :class => "btn btn-primary btn-lg btn-block img-responsive"%>
+        <div class="call-action img-responsive">
+          <a href="/leads/new" class="btn btn-primary btn-lg img-responsive" id="get-estimate-button" role="button" >Get a FREE Estimate!</a>           
+          
         </div>
       </div>
 
