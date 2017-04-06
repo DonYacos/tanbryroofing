@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def contact_us
   end
+
+  def roof_repairs
+  end
 end

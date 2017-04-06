@@ -7,11 +7,13 @@
   <title><%= full_title(yield(:title)) %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Bryce Roofing and Contracting - Your best choice for commercial and residential roofing installations, service and repairs." %>">
   <meta name="keywords" content="roof repairs, roof repair contractor, residential roof repairs, commercial roof repairs, roofing repair contractor,">
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="custom.css.scss">
   <%= favicon_link_tag 'favicon.ico' %>
+  <script src="https://use.fontawesome.com/9e56740993.js"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,7 +64,7 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Log in", login_path %></li>
+            <li id="login-button"><%= link_to "Log in", login_path %></li>
           <% end %>
 
         </ul>

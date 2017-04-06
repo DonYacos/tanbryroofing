@@ -69,6 +69,7 @@ p {
 	background-color: #fb8c00;
 	border-color: #ef6c00;
 	font-size: 1.6em;
+	color: white;
 	text-shadow: 1px 1px 1px #333;
 	padding-left: 42px;
 	padding-right: 42px;
@@ -243,6 +244,71 @@ miscellaneous
 		padding: 10px 0;
 		border-bottom: 1px solid $gray-lighter;
 	}
+}
+
+/* Repair Page */
+
+#repair-page-hero {
+	background-image: url("atl-1.jpg");
+	background-color: #00897b;
+	height: 500px;
+	padding-left: 20px;
+	padding-top: 20px;
+	h1 {
+		margin-top: 60px;
+		margin-bottom: 0px;
+		font-weight: bolder;
+		color: white;
+		font-size: 7em;
+	}
+	h2 {
+		margin-top: 0px;
+		color: white;
+		font-size: 3em;
+	}
+	p {
+		color: white;
+		font-size: 2em;
+	}
+}
+
+#roof-repair-form {
+	background-color: rgba(0, 137, 123, 0.7 );
+	display: inline-block; 
+	float: right;
+	padding:20px 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	input:nth-last-child(1) {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px 40px;
+	}
+	p {
+		font-size: 1.3em;
+		padding: 10px 20px 20px 20px;
+	}
+}
+
+.warranty {
+	margin-top: 80px;
+
+}
+
+.testimonials {
+	margin-top: 60px;
+	h1 {
+		margin-bottom: 40px;
+	}
+}
+
+.testimonial-box {
+	background-color: #eee;
+	border-width: 1px;
+	border-color: #ccc;
+	box-shadow:  0 3px 7px 0 rgba(0,0,0,0.26);
+	height: 300px;
+	padding: 15px;
 }
 
 

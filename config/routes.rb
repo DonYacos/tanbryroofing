@@ -15,6 +15,7 @@ Tanbryroofing::Application.routes.draw do
   get "pages/commercial"
   get "pages/residential"
   get "pages/contact_us"
+  get "pages/roof_repair"
 
   get    'signup' => 'users#new'
   get    'login'  => 'sessions#new'

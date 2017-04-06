@@ -1,0 +1,267 @@
+
+<div id="repair-page-hero">
+	<div class="container">
+	
+	
+
+	<div class="row">
+
+		
+
+		<div class="col-md-6">
+		<h1 id="hero-headline">$99 Off!</h1>
+		<h2>Roof Repairs<smaller>*</smaller></h2>
+
+		<p>Get roof repairs done now and save $99!<br>
+		We can save your roof!</p>
+		<p style="font-size: 1em">*Offer is for limited time only. $350 minimum charge for repair service call.</p>
+		</div>
+
+			<div class="col-md-6" id="roof-repair-form">
+        <%= form_for Lead.new, :class => "form-horizontal" do |f| %>
+
+          <div class="col-md-12">
+
+          <p>Fill out this short form and we'll contact you usually within a few minutes. We will never share your information.
+          Or if you prefer, call us at (770) 904-9320. </p>
+
+                  
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <%#= f.label "First name" %>
+                <%= f.text_field :firstName, :class => "form-control input-lg", :placeholder => "First name" %>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <%#= f.label "Last name" %>
+                <%= f.text_field :lastName, :class => "form-control input-lg", :placeholder => "Last name" %>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <%#= f.label :phone %>
+                <%= f.telephone_field :phone, :class => "form-control input-lg", :placeholder => " Phone number" %>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <%#= f.label :email %>
+                <%= f.email_field :email, :class => "form-control input-lg", :placeholder => "Email" %>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <!-- <label for="autocomplete">Property Address</label> -->
+                <input id="autocomplete" class="form-control input-lg" placeholder="Property address" onFocus="geolocate()" type="text"></input>
+              </div>
+            </div>
+
+            <div id="address">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <%= f.label :streetnumber %>
+                  <%= f.text_field :streetnumber, :id => "street_number", :class => "form-control", :placeholder => "Number" %>
+                </div>
+              </div>
+
+
+              <div class="col-md-8">
+                <div class="form-group">
+                  <%= f.label :street %>
+                  <%= f.text_field :street, :id => "route", :class => "form-control", :placeholder => "Street" %>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <%= f.label :city %>
+                  <%= f.text_field :city, :id => "locality", :class => "form-control", :placeholder => "City" %>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <%= f.label :state %>
+                  <%= f.text_field :state, :id => "administrative_area_level_1", :class => "form-control", :placeholder => "State" %>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <%= f.label :zip %>
+                  <%= f.text_field :zip, :id => "postal_code", :class => "form-control", :placeholder => "Zip" %>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="form-group">              
+              <p class="help-block">Please tell us whether your roof is for a residence or<br>a commercial property.</p>
+            </div>
+
+            <div class="col-md-12">
+              <div class="checkbox">
+                <%#= check_box_tag(:residential, "true") %>
+                <%#= label_tag(:residential) %>
+              </div>
+              <div class="checkbox">
+                <%#= check_box_tag(:commercial, "true") %>
+                <%#= label_tag(:commercial) %>
+              </div>
+             </div>  -->
+
+            <div class="col-md-12"> 
+              <div class="form-group">
+                <%#= f.label :comment %>
+                <%= f.text_area :comment, :class => "form-control input-lg", :placeholder => "Optional additional information" %>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <%= f.submit "Get FREE Estimate", :id => "get-estimate-button" %>
+            </div>
+
+          </div> 
+        <% end %>
+    	</div>
+		
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="warranty">
+
+			<%= image_tag ('warranty.jpg') %>
+
+			<h1>Industry's Best Repair Warranty!</h1>
+
+			<p> We offer a No Worries - Two Year Written Limited Warranty on all repairs made by Bryce Roofing. Most contractors will tell you they can't guarantee their roof repairs. We guarantee our roof repairs to last!</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="testimonials">
+			
+			<%= image_tag ('testimonial_bubbles.jpg') %>
+
+			<h1>Here's What People Have to Say!</h1>
+
+			<div class="row">
+
+				
+
+				<div class="col-md-3 testimonial-box">		
+					<i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i><p>We are very happy with the work Bryce Roofing did on our house. We had a recurring leak that with all the attempts to have it fixed, just wouldn't go away. Don and his team found the problem and we haven't had a leak since. Thanks Don and Bryce Roofing.</p><cite>Rena S</cite>
+				</div>
+
+				<div class="col-md-1"></div>
+
+				<div class="col-md-3 testimonial-box">		
+					<i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i><p>Bryce Roofing was very responsive and professional. They fixed the problem and I am very happy with the work. They were not the lowest quote I got, but I believe I got the best value.</p><cite>Anthony S</cite>
+				</div>
+
+				<div class="col-md-1"></div>
+
+				<div class="col-md-3 testimonial-box">		
+					<i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i><p>Don did a fantastic job fixing my roof.  His quote was reasonable and he finished the job just as he promised.  He left the job in perfect condition.  I would recommend him to anyone!</p><cite>Cheryl H</cite>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Begin Javascript for Google Places API autocomplete -->
+<script>
+// This example displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
+
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+var placeSearch, autocomplete;
+var componentForm = {
+  street_number: 'short_name',
+  route: 'long_name',
+  locality: 'long_name',
+  administrative_area_level_1: 'short_name',
+  //country: 'long_name',
+  postal_code: 'short_name'
+};
+
+function initAutocomplete() {
+  // Create the autocomplete object, restricting the search to geographical
+  // location types.
+  autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+      {types: ['geocode']});
+
+  // When the user selects an address from the dropdown, populate the address
+  // fields in the form.
+  autocomplete.addListener('place_changed', fillInAddress);
+}
+
+// [START region_fillform]
+function fillInAddress() {
+  // Get the place details from the autocomplete object.
+  var place = autocomplete.getPlace();
+
+  for (var component in componentForm) {
+    document.getElementById(component).value = '';
+    document.getElementById(component).disabled = false;
+  }
+
+  // Get each component of the address from the place details
+  // and fill the corresponding field on the form.
+  for (var i = 0; i < place.address_components.length; i++) {
+    var addressType = place.address_components[i].types[0];
+    if (componentForm[addressType]) {
+      var val = place.address_components[i][componentForm[addressType]];
+      document.getElementById(addressType).value = val;
+    }
+  }
+}
+// [END region_fillform]
+
+// [START region_geolocation]
+// Bias the autocomplete object to the user's geographical location,
+// as supplied by the browser's 'navigator.geolocation' object.
+function geolocate() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var circle = new google.maps.Circle({
+        center: geolocation,
+        radius: position.coords.accuracy
+      });
+      autocomplete.setBounds(circle.getBounds());
+    });
+  }
+}
+// [END region_geolocation]
+
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU5vig9CYOlbr5TYIIkF1zRphW4H58-Mw&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+</div>
+
+<script type="text/javascript">
+    $('.navbar-header').hide();
+    $('#get-estimate-button').hide();
+    $('#login-button').hide();
+    $('#phone').hide();
+</script>
+
+
